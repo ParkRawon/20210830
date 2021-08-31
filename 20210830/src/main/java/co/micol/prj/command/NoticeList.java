@@ -11,20 +11,18 @@ import co.micol.prj.notice.service.NoticeService;
 import co.micol.prj.notice.serviceImpl.NoticeServiceImpl;
 import co.micol.prj.notice.vo.NoticeVO;
 
-public class MainCommand implements Command {
+public class NoticeList implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		// 처음 접근하는 페이지
-		//공지사항 리스트를 가져오는 것을 만들어 준다.
+		// 게시글 목록 보기
 		NoticeService noticeDao = new NoticeServiceImpl();
-		List<NoticeVO> list = new ArrayList<NoticeVO>();
-		list = noticeDao.noticeSelectList();
+		List<NoticeVO> notices = new ArrayList<NoticeVO>();
 		
-		request.setAttribute("notices", list);
+		notices = noticeDao.noticeSelectList();
+		request.setAttribute("notices", notices);
 		
-		
-		return "home/home";  //web-inf/home/home.jsp를 돌려준다.
+		return "notice/noticeList";
 	}
 
 }

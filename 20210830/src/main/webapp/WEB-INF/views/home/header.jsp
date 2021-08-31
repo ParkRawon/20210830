@@ -22,10 +22,10 @@
 				</c:if>
 				<c:if test= "${id ne null }">
 					<li><a href="logout.do">LogOut</a></li>
-					<li><a href="myInfoEdit.do">개인정보 수정</a></li>
+					<li><a href="myInfoEdit.do">MyPage</a></li>
 				</c:if>
 				
-				<li><a href="#">Notice</a></li>
+				<li><a href="noticeList.do">Notice</a></li>
 				<li><a href="#">Product</a></li>
 				<li><a href="#">Service</a></li>
 				<c:if test="${auth eq 'ADMIN' }">

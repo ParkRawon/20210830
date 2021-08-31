@@ -18,6 +18,14 @@ import co.micol.prj.command.Logout;
 import co.micol.prj.command.MainCommand;
 import co.micol.prj.command.MyInfoEdit;
 import co.micol.prj.command.MyInfoUpdate;
+import co.micol.prj.command.NoticeDelete;
+import co.micol.prj.command.NoticeList;
+import co.micol.prj.command.NoticeSelect;
+import co.micol.prj.command.NoticeUpdate;
+import co.micol.prj.command.NoticeUpdateForm;
+import co.micol.prj.command.NoticeWrite;
+import co.micol.prj.command.NoticeWriteForm;
+
 
 
 
@@ -40,6 +48,13 @@ public class FrontController extends HttpServlet {
 		map.put("/logout.do", new Logout());  //로그아웃 하기
  		map.put("/myInfoEdit.do", new MyInfoEdit()); //정보 수정하기
 		map.put("/myInfoUpdate.do", new MyInfoUpdate()); //실제 정보수정을 실행하는 곳
+		map.put("/noticeList.do", new NoticeList()); //게시글 목록 보기
+		map.put("/noticeSelect.do", new NoticeSelect()); //게시글 상세보기
+		map.put("/noticeDelete.do", new NoticeDelete()); //게시물 삭제하기
+		map.put("/noticeWriteForm.do", new NoticeWriteForm()); //글쓰기
+		map.put("/noticeWrite.do", new NoticeWrite());  //게시글 저장
+		map.put("/noticeUpdate.do", new NoticeUpdate());  //게시물 수정하기
+		map.put("/noticeUpdateForm.do", new NoticeUpdateForm()); //게시물 수정 폼 호출
 	}
 
 	
