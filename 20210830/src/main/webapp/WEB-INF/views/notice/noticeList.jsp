@@ -27,7 +27,7 @@
 	}
 </script>
 </head>
-<jsp:include page="../home/header.jsp" />
+<jsp:include page="../home/home.jsp" />
 <body>
 <div align="center">
 	<div><h1>공지사항 목록</h1></div>
@@ -58,7 +58,7 @@
 	</div>	
 	<div>
 		<form id="frm" name="frm" action="noticeSelect.do" method="post">
-			<input type="hidden" id="id" name="id">
+			<input type="hidden" id="id" name="id">  <!-- key값을 히든폼에 담아서 넘겨줘야한다. -->
 		</form>
 	</div>
 </div>
